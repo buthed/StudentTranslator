@@ -8,22 +8,41 @@
         android:fitsSystemWindows="true"
         android:layout_marginBottom="@dimen/margin_medium">
 
-    <TextView
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_x_small">
+
+        <TextView
+            android:id="@+id/search_button_title"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            style="@style/HeaderTextStyle"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:text="@string/button_search_title"
+            android:layout_gravity="end"/>
+
+        <TextView
             android:id="@+id/search_button_textview"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             style="@style/TextViewButtonStyle"
             android:layout_marginTop="@dimen/margin_medium"
             android:layout_marginEnd="@dimen/margin_medium"
-            android:text="@string/button_search"
+            android:text="@string/button_translate"
             android:layout_gravity="end"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <FrameLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/margin_medium"
-            android:layout_marginBottom="@dimen/margin_xxx_medium"
-            android:layout_marginEnd="@dimen/margin_medium"
-            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_small"
             android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputLayout
